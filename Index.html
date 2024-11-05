@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monthly Statements</title>
+    <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="./CSS-File/bootstrap.css">
+  </head>
+  <body>
+    <!-- Heading Start -->
+    <h1 class="text-center text-primary fw-bold py-4">Monthly Statements</h1>
+    <!-- Heading End -->
+
+    <main class="container">
+      <div class="row justify-content-center align-items-center">
+        <!-- Banner Image Start -->
+        <div class="col-md-6 mb-4">
+          <img src="./Image/money.jpeg" alt="Money Image" class="img-fluid" />
+        </div>
+        <!-- Banner Image End -->
+
+        <div class="col-md-6 text-start bg-light p-4 rounded">
+          <!-- Income and Expenses Form Start -->
+          <form id="incomeAndExpenses">
+            <h4 class="fw-bold text-center">Income</h4>
+            <div class="mb-3">
+              <label for="income" class="form-label fw-bolder">Income:</label>
+              <input
+                type="text"
+                id="income"
+                class="form-control"
+                required
+                autocomplete="off"
+              />
+              <span class="text-danger fw-bold" id="incomeErr"></span>
+            </div>
+
+            <h4 class="fw-bolder">Expenses</h4>
+            <div class="mb-3">
+              <label for="food" class="form-label">Food:</label>
+              <input
+                type="text"
+                id="food"
+                class="form-control"
+                required
+                autocomplete="off"
+              />
+              <span class="text-danger" id="foodErr"></span>
+            </div>
+
+            <div class="mb-3">
+              <label for="rent" class="form-label">Rent:</label>
+              <input
+                type="text"
+                id="rent"
+                class="form-control"
+                required
+                autocomplete="off"
+              />
+              <span class="text-danger" id="rentErr"></span>
+            </div>
+
+            <div class="mb-3">
+              <label for="clothes" class="form-label">Clothes:</label>
+              <input
+                type="text"
+                id="clothes"
+                class="form-control"
+                required
+                autocomplete="off"
+              />
+              <span class="text-danger" id="clothesErr"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 mb-3">Calculate</button>
+          </form>
+          <!-- Income and Expenses Form End -->
+
+          <h4 class="fw-bold">Total Expenses: <span id="totalExpenses"></span></h4>
+          <h4 class="fw-bold">Balance: <span id="balance"></span></h4>
+
+          <!-- Saving Form Start -->
+          <form id="savingForm" class="mt-5">
+            <div class="d-flex justify-content-start align-items-start mb-3">
+              <label for="mt-3 save" class="me-5">Save:</label>
+              <input
+                type="text"
+                id="save"
+                class="form-control text-center"
+                style="width: 60px"
+                required
+                autocomplete="off"
+              />
+              <span>%</span>
+            </div>
+            <button type="submit" class="btn btn-primary mb-3 ">Save</button>
+          </form>
+          <!-- Saving Form End -->
+
+          <span class="text-danger" id="saveErr"></span>
+          <h4 class="fw-bold">Saving Amount: <span id="savingAmount"></span></h4>
+          <h4 class="fw-bold">Remaining Balance: <span id="remainingBalance"></span></h4>
+        </div>
+      </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="./JavaScript-File/app.js"></script>
+  </body>
+</html>
